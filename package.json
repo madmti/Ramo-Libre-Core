@@ -1,14 +1,27 @@
 {
-    "name": "ramolibre-core",
-    "private": true,
-    "type": "module",
-    "workspaces": [
-        "packages/*"
-    ],
-    "devDependencies": {
-        "@types/bun": "latest"
+  "name": "@ramolibre/core",
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "exports": {
+    "./dsl-parser": {
+      "types": "./packages/dsl-parser/src/index.ts",
+      "import": "./packages/dsl-parser/src/index.ts",
+      "default": "./packages/dsl-parser/src/index.ts"
     },
-    "peerDependencies": {
-        "typescript": "^5"
-    }
+    "./ui-themes": {
+      "types": "./packages/ui-themes/src/index.ts",
+      "import": "./packages/ui-themes/src/index.ts",
+      "default": "./packages/ui-themes/src/index.ts"
+    },
+    "./ui-themes/tailwind.css": "./packages/ui-themes/tailwind.css"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
 }

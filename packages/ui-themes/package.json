@@ -12,8 +12,7 @@
           "types": "./src/index.ts",
           "import": "./src/index.ts",
           "default": "./src/index.ts"
-        },
-        "./tailwind.css": "./src/tailwind.css"
+        }
     },
     "devDependencies": {
         "@types/bun": "latest"
